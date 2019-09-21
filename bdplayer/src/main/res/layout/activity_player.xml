@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <RelativeLayout
+        android:id="@+id/view_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <android.widget.ImageView
+        android:id="@+id/v_play_thumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@+id/header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/v_playbar_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <android.widget.ImageView
+            android:id="@+id/v_back"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/v_playbar_back"
+            android:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/v_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="start|center"
+            android:maxLines="1"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:text="Thin Baidu Player"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+
+        <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:format12Hour="hh:mm:ss"
+            android:format24Hour="HH:mm:ss"
+            android:gravity="center"
+            android:padding="10dp"
+            android:shadowColor="#000"
+            android:shadowDx="0.5"
+            android:shadowDy="0.5"
+            android:shadowRadius="2"
+            android:text="08:09:16"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/item_preparing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/ctrl_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/v_palybar_bottom"
+        android:orientation="horizontal">
+
+        <android.widget.ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:clickable="true"
+            android:focusable="true"
+
+            android:scaleType="centerInside"
+            android:src="@drawable/v_play_arrow"
+            android:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:maxHeight="3dp"
+            android:minHeight="3dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:progressDrawable="@drawable/bd_seekbar_holo_light"
+            android:thumb="@drawable/v_thumb"
+            android:thumbOffset="0dip" />
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="end|center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <android.widget.ImageView
+            android:id="@+id/v_rotate"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/v_screen_full"
+            android:tint="@android:color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:shadowColor="#000"
+        android:shadowDx="0.5"
+        android:shadowDy="0.5"
+        android:shadowRadius="2"
+        android:text="音量:50%"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+
+
+    <android.widget.ImageView
+        android:id="@+id/v_player_lock"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="start|center"
+        android:layout_marginLeft="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/v_player_unlocked"
+        android:tint="@android:color/white" />
+
+</FrameLayout>
